@@ -14,3 +14,13 @@ https://symfony.com/book
 ## Start
 
 `symfony new guestbook --version=5.0`
+
+## SymfonyCloud
+
+1. create a Symfony Connect account
+2. follow the instructions to setup SymfonyCloud [here](https://symfony.com/doc/current/cloud/getting-started.html#installing-the-cli-tool)
+3. use `symfony deploy` to deploy the app to SymfonyCloud
+
+In case this can not be done due to vulnarability issues, upgrade the respective package, e.g.
+
+`composer update symfony/http-kernel`
