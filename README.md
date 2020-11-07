@@ -31,3 +31,12 @@ Once the schema of an entity is changed follow these steps
 
 1. create a migration `$ symfony console make:migration`
 2. run the migration `$ symfony console doctrine:migrations:migrate`
+
+## In case you get a MIME type error
+
+In case you get a MIME type error when uploading an image file during adding a comment.
+
+This is because this extension is missing in the local `php.ini`. Add it.
+
+`extension=php_fileinfo.dll`
+
