@@ -25,6 +25,10 @@ In case this can not be done due to vulnarability issues, upgrade the respective
 
 `composer update symfony/http-kernel`
 
+## Create a schema in the database
+
+`symfony console doctrine:schema:create`
+
 ## Changing entities
 
 Once the schema of an entity is changed follow these steps
@@ -58,3 +62,18 @@ $ symfony run psql -c "INSERT INTO admin (id, username, roles, password) \
 ```
 
 If you can't run it from your command line *PgAdmin* can also be used to execute this query and insert the data into the admin table. Make sure the cell does not contain escaped dollar chars afterwards.
+
+## Loading fixtures for different database
+
+Prepare a different database string in your `.env.test` so that once `APP_ENV` is set to `test` this connection string can be used.
+
+Load the fixtures with this command:
+
+`symfony console doctrine:fixtures:load`
+
+## Learning
+
+Dump the Autoloader with this command `composer dump-autoload`.
+
+Clear the cache with `php bin/console cache:clear`.
+
