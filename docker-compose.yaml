@@ -4,9 +4,9 @@ services:
     database:
         image: postgres:11-alpine
         environment:
-            POSTGRES_USER: main
-            POSTGRES_PASSWORD: main
-            POSTGRES_DB: main
+            POSTGRES_USER: pgadminuser
+            POSTGRES_PASSWORD: secret
+            POSTGRES_DB: guestbook_db
         ports: [5432]
 
     redis:
