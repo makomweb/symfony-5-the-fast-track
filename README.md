@@ -71,9 +71,16 @@ Load the fixtures with this command:
 
 `symfony console doctrine:fixtures:load`
 
-## Learning
+## Learnings
 
 Dump the Autoloader with this command `composer dump-autoload`.
 
 Clear the cache with `php bin/console cache:clear`.
 
+## Running functional tests
+
+1. prepare environment to handle test with the test database in test environements
+
+2. setup fixtures and load them into the test database by `symfony console doctrine:fixtures:load`
+
+3. execute the (functional) tests `symfony php bin/phpunit tests/Controller/ConferenceControllerTest.php`
