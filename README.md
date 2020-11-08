@@ -40,3 +40,22 @@ This is because this extension is missing in the local `php.ini`. Add it.
 
 `extension=php_fileinfo.dll`
 
+## Add an admin into the database after the schema was updated
+
+Create a hashed password string
+
+```
+$ symfony console security:encode-password
+```
+
+Copy the password string and edit the following query string.
+Run this query in the command line
+
+```
+$ symfony run psql -c "INSERT INTO admin (id, username, roles, password) \
+  VALUES (nextval('admin_id_seq'), 'admin', '[\"ROLE_ADMIN\"]', \
+  '\$argon2id\$v=19\$m=65536,t=4,p=1\$lrWH0r5h1ebopSXBWeNx5A\$J09olQNIl/hzka+DiV7Umd8dsiN0sSAz3GBJoqbb3h8')"
+```
+
+If you can't run it from your command line PgAdmin can also be used to execute this query and insert the data into the admin table.
+
