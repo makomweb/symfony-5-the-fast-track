@@ -7,7 +7,7 @@ use App\Entity\Conference;
 use App\Form\CommentFormType;
 use App\Repository\CommentRepository;
 use App\Repository\ConferenceRepository;
-use App\SpamChecker;
+use App\SpamCheckerMock;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
@@ -44,7 +44,7 @@ class ConferenceController extends AbstractController
         Conference $conference,
         CommentRepository $commentRepository,
         ConferenceRepository $conferenceRepository,
-        SpamChecker $spamChecker, 
+        SpamCheckerMock $spamChecker, 
         string $photoDir): Response
     {
         $comment = new Comment();
