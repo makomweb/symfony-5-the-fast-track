@@ -4,7 +4,7 @@ namespace App\MessageHandler;
 
 use App\Message\CommentMessage;
 use App\Repository\CommentRepository;
-use App\SpamChecker;
+use App\SpamCheckerMock;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
@@ -14,7 +14,7 @@ class CommentMessageHandler implements MessageHandlerInterface
     private $entityManager;
     private $commentRepository;
 
-    public function __construct(EntityManagerInterface $entityManager, SpamChecker $spamChecker, CommentRepository $commentRepository)
+    public function __construct(EntityManagerInterface $entityManager, SpamCheckerMock $spamChecker, CommentRepository $commentRepository)
     {
         $this->entityManager = $entityManager;
         $this->spamChecker = $spamChecker;
