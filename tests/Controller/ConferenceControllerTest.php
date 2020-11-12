@@ -1,20 +1,20 @@
 <?php
 
 namespace App\Tests\Controller;
-use Symfony\Component\Panther\PantherTestCase;
 
-class ConferenceControllerTest extends PantherTestCase
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+
+class ConferenceControllerTest extends WebTestCase
 {
     public function testIndex()
     {
-        $client = static::createPantherClient(['external_base_uri' => $_SERVER['SYMFONY_PROJECT_DEFAULT_ROUTE_URL']]);
+        $client = static::createClient();
         $client->request('GET', '/');
 
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextContains('h2', 'Give your feedback');
     }
 
-    /*
     public function testCommentSubmission()
     {
         $client = static::createClient();
@@ -46,5 +46,4 @@ class ConferenceControllerTest extends PantherTestCase
         //$this->assertSelectorExists('div:contains("There are 1 comments.")');
         $this->assertSelectorTextContains('div', 'There are 1 comments.');
     }
-    */
 }
