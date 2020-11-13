@@ -3,15 +3,18 @@
 namespace App;
 
 use App\Entity\Comment;
+use Psr\Log\LoggerInterface;
 
 class SpamCheckerMock
 {
     /** @var int */
     private $storedResult;
+    private $logger;
 
-    public function __construct(int $storedResult = 0)
+    public function __construct(LoggerInterface $logger, int $storedResult = 0)
     {
         $this->storedResult = $storedResult;
+        $this->logger = $logger;
     }
 
     /**
@@ -19,6 +22,7 @@ class SpamCheckerMock
      */
     public function getSpamScore(Comment $comment, array $context): int
     {
+        $this->logger->info("check spam score!!!");
         return $this->storedResult;
     }
 }
