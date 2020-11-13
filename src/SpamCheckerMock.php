@@ -11,7 +11,7 @@ class SpamCheckerMock
     private $storedResult;
     private $logger;
 
-    public function __construct(LoggerInterface $logger, int $storedResult = 2)
+    public function __construct(LoggerInterface $logger, int $storedResult = 0)
     {
         $this->storedResult = $storedResult;
         $this->logger = $logger;
