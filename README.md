@@ -84,3 +84,17 @@ Clear the cache with `php bin/console cache:clear`.
 2. setup fixtures and load them into the test database by `symfony console doctrine:fixtures:load`
 
 3. execute the (functional) tests `symfony php bin/phpunit tests/Controller/ConferenceControllerTest.php`
+
+## Starting the server and run the message consumer
+
+Start the webserver: `symfony server:start -d`
+
+Start consuming messages: `symfony console messenger:consume async`
+
+You can also use run worker for restarting consuming messages whenever something in the specified directories changes:
+
+`symfony run -d --watch=config,src,templates,vendor symfony console messenger:consume async`
+
+## Show the logs
+
+Use `symfony server:log` to tail the logs
