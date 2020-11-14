@@ -98,3 +98,10 @@ You can also use run worker for restarting consuming messages whenever something
 ## Show the logs
 
 Use `symfony server:log` to tail the logs
+
+## Styling the UI
+
+Happens with _Webpack Encore_, _Bootstrap 4_.
+While I was following the guidelines from the book I encoutered a problem with Saas-Loader^8.0.
+Removing the version helped to get passed the point of building the assets.
+
