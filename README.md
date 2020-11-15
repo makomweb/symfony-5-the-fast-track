@@ -107,3 +107,8 @@ Happens with _Webpack Encore_, _Bootstrap 4_.
 While I was following the guidelines from the book I encoutered a problem with Saas-Loader^8.0.
 Removing the version helped to get passed the point of building the assets.
 
+## Using workflows
+
+Supposed _dot_ (Graphviz) is in your PATH you can run the following:
+
+`symfony console workflow:dump comment | dot -Tpng -o workflow.png`
