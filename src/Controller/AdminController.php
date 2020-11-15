@@ -37,20 +37,26 @@ class AdminController extends AbstractController
     public function reviewComment(Request $request, Comment $comment, Registry $registry): Response
     {
         $accepted = !$request->query->get('reject');
-
         $machine = $registry->get($comment);
-        if ($machine->can($comment, 'publish')) {
+
+        if ($machine->can($comment, 'publish'))
+        {
             $transition = $accepted ? 'publish' : 'reject';
-        } elseif ($machine->can($comment, 'publish_ham')) {
+        }
+        elseif ($machine->can($comment, 'publish_ham'))
+        {
             $transition = $accepted ? 'publish_ham' : 'reject_ham';
-        } else {
+        }
+        else
+        {
             return new Response('Comment already reviewed or not in the right state.');
         }
 
         $machine->apply($comment, $transition);
         $this->entityManager->flush();
 
-        if ($accepted) {
+        if ($accepted)
+        {
             $this->bus->dispatch(new CommentMessage($comment->getId()));
         }
 
