@@ -77,6 +77,8 @@ Dump the Autoloader with this command `composer dump-autoload`.
 
 Clear the cache with `php bin/console cache:clear`.
 
+Clear the HTTP cache by removing it `rm -rf var/cache/dev/http_cache`
+
 ## Running functional tests
 
 1. prepare environment to handle test with the test database in test environements
