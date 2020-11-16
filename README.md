@@ -71,7 +71,7 @@ Load the fixtures with this command:
 
 `symfony console doctrine:fixtures:load`
 
-## Learnings
+## Learnings: Clear Caches
 
 Dump the Autoloader with this command `composer dump-autoload`.
 
