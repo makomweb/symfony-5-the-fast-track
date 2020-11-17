@@ -112,3 +112,20 @@ Removing the version helped to get passed the point of building the assets.
 Supposed _dot_ (Graphviz) is in your PATH you can run the following:
 
 `symfony console workflow:dump comment | dot -Tpng -o workflow.png`
+
+## Slack O-Auth Access Token
+
+1. Visit Your apps at api.slack.com/apps.
+2. Click on an app.
+3. In the Install app section, click Reinstall app. Your new tokens will appear at the top of the page.
+
+I have added the user token scopes _channels:write_, _chat:write_.
+
+The access token looks like this: 
+`xoxp-...-c`
+
+Create a Slack DSN like this:
+
+slack://ACCESS_TOKEN@default?channel=CHANNEL
+
+slack://xoxp-...-c@default?channel=CHANNEL
