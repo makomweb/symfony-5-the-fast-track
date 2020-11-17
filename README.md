@@ -134,3 +134,7 @@ slack://xoxp-...-c@default?channel=CHANNEL
 With Symfony 5.1 the use of Slack has changed significantly from _Legacy Token_ to _Incoming Webhooks_.
 The Token approach was discouraged by Slack recently.
 ~~~
+
+Links:
+- [Creating and Sending Notifications](https://symfony.com/doc/current/notifier.html)
+- [How to send Chat Messages](https://symfony.com/doc/current/notifier/chatters.html)
