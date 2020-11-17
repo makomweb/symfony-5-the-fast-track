@@ -129,3 +129,8 @@ Create a Slack DSN like this:
 slack://ACCESS_TOKEN@default?channel=CHANNEL
 
 slack://xoxp-...-c@default?channel=CHANNEL
+
+~~~
+With Symfony 5.1 the use of Slack has changed significantly from _Legacy Token_ to _Incoming Webhooks_.
+The Token approach was discouraged by Slack recently.
+~~~
