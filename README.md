@@ -142,3 +142,7 @@ Links:
 ## API
 
 The API is exposed under [https://127.0.0.1:8000/api](https://127.0.0.1:8000/api).
+
+## Postfixes after upgrading from Symfony 5 to 5.1
+
+`composer require twig/cssinliner-extra twig/inky-extra`
