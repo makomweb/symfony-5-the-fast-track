@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.12.3",
     "@symfony/webpack-encore": "symfony/webpack-encore"
   }
 }
