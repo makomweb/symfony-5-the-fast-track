@@ -162,3 +162,7 @@ yarn add preact
 yarn add html-webpack-plugin
 yarn add bootstrap
 ~~~
+
+## Preparing the SPA for Symfony 5.1
+
+Instead of running `yarn add node-sass "sass-loader@^9.0"` you can run `yarn add node-sass sass-loader`.
