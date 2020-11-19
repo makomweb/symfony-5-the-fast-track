@@ -8,6 +8,7 @@
     "@babel/preset-env": "^7.12.1",
     "@symfony/webpack-encore": "symfony/webpack-encore",
     "babel-preset-preact": "^2.0.0",
+    "bootstrap": "^4.5.3",
     "html-webpack-plugin": "^4.5.0",
     "preact": "^10.5.7"
   }
