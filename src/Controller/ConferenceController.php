@@ -34,7 +34,7 @@ class ConferenceController extends AbstractController
     }
 
     /**
-     * @Route("/", name="homepage")
+     * @Route("/{_locale<en|de>}/", name="homepage")
      */
     public function index(ConferenceRepository $conferenceRepository): Response
     {
