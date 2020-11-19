@@ -146,3 +146,19 @@ The API is exposed under [https://127.0.0.1:8000/api](https://127.0.0.1:8000/api
 ## Postfixes after upgrading from Symfony 5 to 5.1
 
 `composer require twig/cssinliner-extra twig/inky-extra`
+
+## Prepare for the SPA
+
+`yarn add @symfony/webpack-encore @babel/core @babel/preset-env babel-preset-preact preact html-webpack-plugin bootstrap`
+
+If the entire command produces errors try running them individually.
+
+~~~
+yarn add @symfony/webpack-encore
+yarn add @babel/core
+yarn add @babel/preset-env
+yarn add babel-preset-preact
+yarn add preact
+yarn add html-webpack-plugin
+yarn add bootstrap
+~~~
