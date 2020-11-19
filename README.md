@@ -138,3 +138,7 @@ The Token approach was discouraged by Slack recently.
 Links:
 - [Creating and Sending Notifications](https://symfony.com/doc/current/notifier.html)
 - [How to send Chat Messages](https://symfony.com/doc/current/notifier/chatters.html)
+
+## API
+
+The API is exposed under [https://127.0.0.1:8000/api](https://127.0.0.1:8000/api).
