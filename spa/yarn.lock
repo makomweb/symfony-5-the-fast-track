@@ -858,9 +858,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@symfony/webpack-encore@symfony/webpack-encore":
+"@symfony/webpack-encore@^0.31.0":
   version "0.31.0"
-  resolved "https://codeload.github.com/symfony/webpack-encore/tar.gz/fdf90dad7de090ff27184c39ff2993d751bdaa69"
+  resolved "https://registry.yarnpkg.com/@symfony/webpack-encore/-/webpack-encore-0.31.0.tgz#fe2d6de2c46f72a0020ae10738c4112e71db6fcf"
+  integrity sha512-EBYk8YYi26izrBBeH3mPFIQjvZY8ga1e+Rwm9Awc99ZXlU4oF6upppR301xesoCQxoSw2Rx7N8X42zyVcgMt6g==
   dependencies:
     "@babel/core" "^7.7.0"
     "@babel/plugin-syntax-dynamic-import" "^7.0.0"
