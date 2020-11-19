@@ -166,3 +166,7 @@ yarn add bootstrap
 ## Preparing the SPA for Symfony 5.1
 
 Instead of running `yarn add node-sass "sass-loader@^9.0"` you can run `yarn add node-sass sass-loader`.
+
+## Running the SPA with accessing the API
+
+To workaround environment variables issues with the API-Endpoint I added the environment variable directly.
