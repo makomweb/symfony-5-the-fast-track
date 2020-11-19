@@ -8,10 +8,20 @@ function App() {
     return (
         <div>
             Hello world!
-            <header>
-                <Link href="/">Home</Link>
-                <br />
-                <Link href="/conference/amsterdam2019">Amsterdam 2019</Link>
+            <header className="header">
+                <nav className="navbar navbar-light bg-light">
+                    <div className="container">
+                        <Link className="navbar-brand mr-4 pr-2" href="/">
+                            &#128217; Guestbook
+                        </Link>
+                    </div>
+                </nav>
+
+                <nav className="bg-light border-bottom text-center">
+                    <Link className="nav-conference" href="/conference/amsterdam2019">
+                        Amsterdam 2019
+                    </Link>
+                </nav>
             </header>
 
             <Router>
