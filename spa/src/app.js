@@ -7,7 +7,6 @@ import Conference from './pages/conference';
 function App() {
     return (
         <div>
-            Hello world!
             <header className="header">
                 <nav className="navbar navbar-light bg-light">
                     <div className="container">
