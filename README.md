@@ -170,3 +170,11 @@ Instead of running `yarn add node-sass "sass-loader@^9.0"` you can run `yarn add
 ## Running the SPA with accessing the API
 
 To workaround environment variables issues with the API-Endpoint I added the environment variable directly.
+
+## Install Blackfire
+
+I was not able to run the installation script like described in the book.
+
+Therefor I followed the instructions from the Blackfire website about how to install Blackfire manually.
+
+[Installation of Blackfire on Windows](https://blackfire.io/docs/up-and-running/installation)
