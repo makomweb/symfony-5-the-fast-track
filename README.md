@@ -63,6 +63,10 @@ $ symfony run psql -c "INSERT INTO admin (id, username, roles, password) \
 
 If you can't run it from your command line *PgAdmin* can also be used to execute this query and insert the data into the admin table. Make sure the cell does not contain escaped dollar chars afterwards.
 
+Another option is to use the Docker container previously set up.
+
+`PS:> docker exec -it guestbook_database_1 psql -U <postgres-user> -d <guestbook-db-name>`
+
 ## Loading fixtures for different database
 
 Prepare a different database string in your `.env.test` so that once `APP_ENV` is set to `test` this connection string can be used.
@@ -178,3 +182,10 @@ I was not able to run the installation script like described in the book.
 Therefor I followed the instructions from the Blackfire website about how to install Blackfire manually.
 
 [Installation of Blackfire on Windows](https://blackfire.io/docs/up-and-running/installation)
+
+During investigating the website with Blackfire I figured that I needed to check the following settings:
+
+1) environment variables where set according to the values of my Blackfire profile
+2) the probe (php-module) was installed properly
+3) the browser extension is installed
+4) the agent is running
