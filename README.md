@@ -128,6 +128,8 @@ Supposed _dot_ (Graphviz) is in your PATH you can run the following:
 
 `symfony console workflow:dump comment | dot -Tpng -o workflow.png`
 
+![image](./workflow.png)
+
 ## Slack O-Auth Access Token
 
 1. Visit aour apps at api.slack.com/apps.
