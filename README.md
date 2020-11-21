@@ -2,6 +2,10 @@
 
 https://symfony.com/book
 
+![Image](https://symfony.com/images/the-fast-track-book/covers/en.png)
+
+**This repository contains notes I took and commits I made when I was working through the book _Symfony 5 - The Fast Track_.**
+
 ## Prerequisites
 
 - install Git
@@ -17,9 +21,16 @@ https://symfony.com/book
 
 ## SymfonyCloud
 
+~~~
+Note: SymfonyCloud is only used for hosting the application in production.
+~~~
+
+When I worked through the book I was able to finish it without deploying to _SymfonyCloud_.
+
 1. create a Symfony Connect account
-2. follow the instructions to setup SymfonyCloud [here](https://symfony.com/doc/current/cloud/getting-started.html#installing-the-cli-tool)
-3. use `symfony deploy` to deploy the app to SymfonyCloud
+2. follow the instructions to setup *SymfonyCloud* 
+[here](https://symfony.com/doc/current/cloud/getting-started.html#installing-the-cli-tool)
+3. use `symfony deploy` to deploy the app to *SymfonyCloud*
 
 In case this can not be done due to vulnarability issues, upgrade the respective package, e.g.
 
@@ -67,7 +78,7 @@ Another option is to use the Docker container previously set up.
 
 `PS:> docker exec -it guestbook_database_1 psql -U <postgres-user> -d <guestbook-db-name>`
 
-## Loading fixtures for different database
+## Loading fixtures for a different database
 
 Prepare a different database string in your `.env.test` so that once `APP_ENV` is set to `test` this connection string can be used.
 
@@ -77,11 +88,11 @@ Load the fixtures with this command:
 
 ## Learnings: Clear Caches
 
-Dump the Autoloader with this command `composer dump-autoload`.
+- Dump the Autoloader with this command `composer dump-autoload`.
 
-Clear the cache with `php bin/console cache:clear`.
+- Clear the cache with `php bin/console cache:clear`.
 
-Clear the HTTP cache by removing it `rm -rf var/cache/dev/http_cache`
+- Clear the HTTP cache by removing it `rm -rf var/cache/dev/http_cache`
 
 ## Running functional tests
 
@@ -108,7 +119,7 @@ Use `symfony server:log` to tail the logs
 ## Styling the UI
 
 Happens with _Webpack Encore_, _Bootstrap 4_.
-While I was following the guidelines from the book I encoutered a problem with Saas-Loader^8.0.
+While I was following the guidelines from the book I encoutered a problem with _Saas-Loader^8.0_.
 Removing the version helped to get passed the point of building the assets.
 
 ## Using workflows
@@ -119,9 +130,9 @@ Supposed _dot_ (Graphviz) is in your PATH you can run the following:
 
 ## Slack O-Auth Access Token
 
-1. Visit Your apps at api.slack.com/apps.
-2. Click on an app.
-3. In the Install app section, click Reinstall app. Your new tokens will appear at the top of the page.
+1. Visit aour apps at api.slack.com/apps.
+2. click on an app.
+3. in the Install app section, click Reinstall app. Your new tokens will appear at the top of the page.
 
 I have added the user token scopes _channels:write_, _chat:write_.
 
@@ -135,7 +146,7 @@ slack://ACCESS_TOKEN@default?channel=CHANNEL
 slack://xoxp-...-c@default?channel=CHANNEL
 
 ~~~
-With Symfony 5.1 the use of Slack has changed significantly from _Legacy Token_ to _Incoming Webhooks_.
+With Symfony 5.1 the use of Slack has changed significantly from Legacy Token to Incoming Webhooks.
 The Token approach was discouraged by Slack recently.
 ~~~
 
@@ -173,7 +184,7 @@ Instead of running `yarn add node-sass "sass-loader@^9.0"` you can run `yarn add
 
 ## Running the SPA with accessing the API
 
-To workaround environment variables issues with the API-Endpoint I added the environment variable directly.
+To workaround environment variable issues with the API-Endpoint I added the environment variable directly.
 
 ## Install Blackfire
 
@@ -189,3 +200,11 @@ During investigating the website with Blackfire I figured that I needed to check
 2) the probe (php-module) was installed properly
 3) the browser extension is installed
 4) the agent is running
+
+~~~
+Note that you must have a paid subscription in order to access the timeline view inside the profiler. The free subscription seems to only include the call view. 
+~~~
+
+## Summary
+
+I enjoyed working through this book a lot. The chapters are very structured and build upon each other. I learned a lot about the Symfony eco system and how it integrates Docker, Postgres, RabbitMQ, REDIS, Preact and others. Thank you very much for creating such a great book.
