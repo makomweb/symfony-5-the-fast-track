@@ -210,3 +210,5 @@ Note that you must have a paid subscription in order to access the timeline view
 ## Summary
 
 I enjoyed working through this book a lot. The chapters are very structured and build upon each other. I learned a lot about the Symfony eco system and how it integrates Docker, Postgres, RabbitMQ, REDIS, Preact and others. Thank you very much for creating such a great book.
+
+[Errata suggestions](./errata-suggestions.md)
