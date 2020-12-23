@@ -32,7 +32,7 @@ Note: SymfonyCloud is only used for hosting the application in production.
 
 When I worked through the book I was able to finish it without deploying to _SymfonyCloud_.
 
-In case this can not be done due to vulnarability issues, upgrade the respective package, e.g.
+In case deployment fails due to vulnarability issues, upgrade the `http-kernel`:
 
 `composer update symfony/http-kernel`
 
