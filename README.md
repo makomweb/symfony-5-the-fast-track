@@ -25,12 +25,12 @@ https://symfony.com/book
 Note: SymfonyCloud is only used for hosting the application in production.
 ~~~
 
-When I worked through the book I was able to finish it without deploying to _SymfonyCloud_.
-
 1. create a Symfony Connect account
 2. follow the instructions to setup *SymfonyCloud* 
 [here](https://symfony.com/doc/current/cloud/getting-started.html#installing-the-cli-tool)
 3. use `symfony deploy` to deploy the app to *SymfonyCloud*
+
+When I worked through the book I was able to finish it without deploying to _SymfonyCloud_.
 
 In case this can not be done due to vulnarability issues, upgrade the respective package, e.g.
 
